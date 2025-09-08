@@ -23,6 +23,16 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   const [amount, setAmount] = useState<string | number>(0);
   const [category, setCategory] = useState<string | null>(null);
 
+  const nameOnchange = (event :any) => {
+    setName(event.target.value);
+  }
+  const amountOnchange = (event: any) => {
+    setAmount(event.target.value);
+  }
+  const categoryOnchange = (event:any) => {
+    setCategory(event.target.value);
+  }
+
   const handleSubmit = () => {};
 
   // หากต้องการแปง type string เป็น type number สามารถดูตัวอย่างนี้ได้
@@ -31,5 +41,5 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
 
   return {
     /* Type additional text here. */
-  };
-}
+    
+};

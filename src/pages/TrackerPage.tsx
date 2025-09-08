@@ -14,6 +14,10 @@ export default function ExpenseTracker() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const categories = ["Food", "Transport", "Entertainment"];
 
+  const expenseOnAdd = (onAdd) => {
+      setExpenses()
+    ;}
+
   return (
     <Container style={{ maxWidth: 600, margin: "auto", padding: 20 }}>
       <Title order={2} mb="md">
